@@ -1,0 +1,56 @@
+<section id="demo-view" data-ng-controller="demo as vm">
+    <div class="row demo title">
+        <div class="sixteen columns title demo" style="margin-top:-60px">
+            <h3>1 in 10 people worldwide is unable to read.</h3>
+            <h5 style="font-weight: 400">With Hummingbill's audio-bill delivery, business can now expand their vital services to illiterate consumers.</h5>
+        </div>
+    </div>
+    <div class="row demo main-container demo-custom transparent-back">
+
+        <form accept-charset="UTF-8">
+            <div class="col-md-6 demo form">
+                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="YW+CI/eM9YIk3ojRt+C+AW56cZZAEe/uxstibB0ZVRU=" /></div>
+                <input type="text" class="beta" placeholder="your name here..." name="name">
+                <input type="text" id="number" class="beta" placeholder="your contact number..." name="number">
+                <input type="number" class="beta" name="balance" placeholder=" account balance(KES) here..">
+                <select class="beta" name="product">
+                    <option value="">choose product</option>
+                    <option value="10 Litres of Water">10 Litres of Water</option>
+                    <option value="20 Litres of Water">20 Litres of Water</option>
+                </select>
+                <input type="number" class="beta" placeholder="quantity here.." name="things">
+                <select class="beta" name="duration">
+                    <option value="">choose cycle duration</option>
+                    <option value="week">Week</option>
+                    <option value="month">Month</option>
+                </select>
+
+                <input type="date" class="beta" placeholder="due date" name="duedate">
+                <label for="send-sms" style="color:#fff" class="demo loader intro"><input type="checkbox" id="send-sms" class="" value="sms" name="sms">send me a sms too</label>
+            </div>
+            <div class="col-md-6">
+                <div class="demo loader intro" style="margin-top:-50px;color: #fff">
+                    <p class="intro">With an automated phone call, your customers can understand their bill without depending on a friend or family member.</p>
+                    <p class="intro">Try out the prototype and let us know what you think.</p>
+                    <p class="intro">Please fill in the details on left and click on the <strong style="color:#fdcb34">"Call"</strong> button to experience the trial.</p>
+                </div>
+                <button type="submit" class="beta send right call" style="margin-left:40%">Call</button>
+            </div>
+        </form>
+        <div class="demo loader" style="display:none;" id="loader">
+            <div class="demo loader back"></div>
+            <div class="spinner" id="loader">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <h3 class="center demo" style="margin-top: 70px;">calling on +91 9637282358...</h3>
+        </div>
+        <p class="notification demo" style="display:none" id="sadstats">
+            <strong class="demo">call cost: </strong>5 rs <br>
+            <strong class="demo">call duration:</strong> 2 minutes <br><br>
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, recusandae!
+        </p>
+    </div>
+    </div>
+</section>

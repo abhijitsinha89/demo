@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title data-ng-bind="title">HummingBill</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="content/ie10mobile.css" rel="stylesheet" />
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/base.css" rel="stylesheet" />
+    <link href="Content/layout.css" rel="stylesheet" />
+    <link href="Content/skeleton.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <base href="/" />
+    <link rel="shortcut icon" href="~/Content/Images/favicon.ico">
+    <link rel="apple-touch-icon" href="~/Content/Images/apple-touch-icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/Images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/Images/apple-touch-icon-114x114.png">
+    <style>
+        .body {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-img.hero-demo {
+            height: 100vh;
+            position: fixed;
+        }
+
+        .row.demo.title div h3, .row.demo.title div h5 {
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .row.demo.title {
+            padding: 60px 0;
+            margin: 0;
+        }
+
+        .demo.main-container {
+            background-color: #fff;
+            padding: 50px 60px 40px;
+        }
+
+        .demo.form {
+        }
+
+        p.demo.notification, p.intro {
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 100px;
+        }
+
+        p.intro {
+            margin-top: 15px;
+        }
+
+            p.intro:first-child {
+                margin-top: 90px;
+            }
+
+        strong.demo {
+            font-weight: 400;
+        }
+
+        .beta.send.right.call {
+            margin-right: 20%;
+            margin-top: -25px;
+            margin-bottom: 0;
+        }
+
+        .demo.main-container {
+            border-radius: 15px;
+        }
+
+        input, select, input[type="text"], input[type="number"], input[type="date"] {
+            color: #5cc0d2;
+            color: rgb(169, 169, 169);
+        }
+
+        .intl-tel-input.pretty.inside {
+            width: 100%;
+        }
+
+        ul.country-list li span {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #4f5961;
+        }
+
+        .demo.loader.back {
+            background: url('/assets/app.png') no-repeat;
+            height: 200px;
+            background-size: cover;
+            z-index: -2;
+            margin-top: 50px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 50px auto;
+            margin-top: 150px;
+            margin-top: -80px;
+            margin-left: 60%;
+        }
+
+        .double-bounce1, .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #333;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: bounce 2.0s infinite ease-in-out;
+            animation: bounce 2.0s infinite ease-in-out;
+        }
+
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+            background-color: #fdcb34;
+        }
+
+        .double-bounce1 {
+            background-color: #5cc0d2;
+        }
+
+        @-webkit-keyframes bounce {
+            0%, 100% {
+                -webkit-transform: scale(0.0);
+            }
+
+            50% {
+                -webkit-transform: scale(1.0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(0.0);
+            }
+
+            50% {
+                transform: scale(1.0);
+            }
+        }
+
+        #number {
+            width: 379px;
+            padding-left: 37px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div data-ng-controller="index as vm" class="hero-img">
+        <header class="clearfix">
+            <div data-ng-include="'layout/nav.html'"></div>
+        </header>
+        <div data-ng-click="vm.show=!vm.show">Check out our Beta release</div>
+
+        <div data-ng-show="vm.show" class="betadiv">
+            <div data-ng-include="'layout/beta.html'"></div>
+        </div>
+        <section id="content">
+            <div data-ng-view id="tabcontainer"></div>
+        </section>
+    </div>
+</div>
+
+<!-- Vendor Scripts -->
+<script src="scripts/jquery-2.0.3.js"></script>
+<script src="scripts/angular.js"></script>
+<script src="scripts/angular-animate.js"></script>
+<script src="scripts/angular-route.js"></script>
+<script src="scripts/angular-sanitize.js"></script>
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/ui-bootstrap-tpls-0.10.0.js"></script>
+
+<!-- Bootstrapping -->
+<script src="app.js"></script>
+<script src="config.route.js"></script>
+
+<!-- common Modules -->
+
+    <!-- app -->
+    <script src="demo/demo.js"></script>
+    <script src="home/home.js"></script>
+    <script src="howitworks/howitworks.js"></script>
+    <script src="index.js"></script>
+    <script src="layout/nav.js"></script>
+<!-- app Services -->
+
+<!--designs-->
+</body>
+</html>

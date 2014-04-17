@@ -1,0 +1,125 @@
+<section id="howitworks-view" data-ng-controller="howitworks as vm">
+    <div class="row other hiw howitworks transparent-back" id="how-it-works">
+        <div class="hiw title">
+            <h1>How It Works</h1>
+        </div>
+        <br class="clear">
+        <div class="col-md-12 hiw slide-title">
+            <h5>
+                <span id="mark-0" class="active">Automate</span><i class="fa fa-circle"></i>
+                <span id="mark-1">Revenue</span><i class="fa fa-circle"></i>
+                <span id="mark-2">Invoices</span><i class="fa fa-circle"></i>
+                <span id="mark-3">Payment</span><i class="fa fa-circle"></i>
+                <span id="mark-4">Integration</span><i class="fa fa-circle"></i>
+            </h5>
+        </div>
+        <br class="clear">
+        <div class="col-md-1 hiw slide btn" style="top:-50px"><i class="fa fa-angle-left" id="back-btn"></i></div>
+        <div class="col-md-10">
+            <div class="six columns hiw slide img">
+                <img id="slide-img" src="/Content/Images/slide-0.png" alt="reveue model">
+            </div>
+            <div id="slide-txt-2" class="eight columns hiw slide text hidden">
+                <p><em>Your customers are mobile, and so should your billing - Hummingbill supports multiple types of invoices:</em></p>
+                <ul>
+                    <li>SMS Shortcodes</li>
+                    <li>Phone call</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+            <div id="slide-txt-1" class="eight columns hiw slide text hidden">
+                <p>
+                    <em>No matter the type of billing or revenue model, Hummingbill has it covered:</em>
+                    <ul>
+                        <li>Daily, Weekly, Monthly, Quarterly and Annual</li>
+                        <li>Single and Multi-Subscription</li>
+                        <li>Usage-based</li>
+                        <li>Lease-to-own</li>
+                        <li>Pay-As-You-Go</li>
+                        <li>Tiered and Packaged Pricing</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="slide-txt-0" class="eight columns hiw slide text">
+                <p>
+                    <em>Hummingbill simplifies daily billing through smart automation. From calculating bills to delivering receipts, Hummingbill saves businesses hundreds of hours each month. Hummingbill Automates:<br></em>
+                    <ul>
+                        <li>Bill Calculation</li>
+                        <li>Bill & Receipt Delivery</li>
+                        <li>Payment Reconciliation</li>
+                        <li>Balance Notifications</li>
+                        <li>Subscription Changes & Dunning</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="slide-txt-3" class="eight columns hiw slide text hidden">
+                <p><em>Hummingbill supports a growing number of different payment gateways:</em></p>
+                <ul>
+                    <li>Buygoods and Paybill (M-Pesa and Airtel)</li>
+                    <li>PayPal</li>
+                    <li>Visa and Mastercard</li>
+                </ul>
+            </div>
+            <div id="slide-txt-4" class="eight columns hiw slide text hidden">
+                <p><em>Hummingbill integrates with everything you need to get the job done.</em></p>
+                <ul>
+                    <li>Echo Agent for mobile sales</li>
+                    <li>Mailchimp for better email</li>
+                    <li>…& coming soon: Quickbooks, Uhasibu and Tally, for all of your accounting needs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="hiw slide btn col-md-1" style="top:-50px"><i class="fa fa-angle-right" id="next-btn"></i></div>
+    </div> 
+    <div class="div excess" style="display:none">
+        <img src="/Content/Images/slide-1.png">
+        <img src="/Content/Images/slide-2.png">
+        <img src="/Content/Images/slide-3.png">
+        <img src="/Content/Images/slide-4.png">
+    </div> 
+</section>
+<script>
+    var state = 0;
+    $('#next-btn').click(function () {
+        next();
+    });
+    $('#back-btn').click(function () {
+        back();
+    });
+    function back() {
+        if (state > 0) {
+            $('#slide-txt-' + state).css('display', 'none');
+            $('#mark-' + state).removeClass("active");
+            state -= 1;
+            $('#slide-img').attr('src', '/Content/Images/slide-' + state + '.png');
+            $('#slide-txt-' + state).css('display', 'inline');
+            $('#mark-' + state).addClass("active");
+        }
+        else if (state === 0) {
+            $('#slide-txt-' + state).css('display', 'none');
+            $('#mark-' + state).removeClass("active");
+            state = 4;
+            $('#slide-img').attr('src', '/Content/Images/slide-' + state + '.png');
+            $('#slide-txt-' + state).css('display', 'inline');
+            $('#mark-' + state).addClass("active");
+        };
+    }
+    function next() {
+        if (state < 4) {
+            $('#slide-txt-' + state).css('display', 'none');
+            $('#mark-' + state).removeClass("active");
+            state += 1;
+            $('#slide-img').attr('src', '/Content/Images/slide-' + state + '.png');
+            $('#slide-txt-' + state).css('display', 'block');
+            $('#mark-' + state).addClass("active");
+        }
+        else if (state === 4) {
+            $('#slide-txt-' + state).css('display', 'none');
+            $('#mark-' + state).removeClass("active");
+            state = 0;
+            $('#slide-img').attr('src', '/Content/Images/slide-' + state + '.png');
+            $('#slide-txt-' + state).css('display', 'inline');
+            $('#mark-' + state).addClass("active");
+        };
+    }
+</script>
